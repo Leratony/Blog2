@@ -22,12 +22,8 @@ class mainPageController extends Controller
         $em = $this->getDoctrine()
             ->getManager();
 
-        $blogs = $em->createQueryBuilder()
-            ->select('b')
-            ->from('Sibers\BlogBundle\Entity\Blog',  'b')
-            ->addOrderBy('b.created', 'DESC')
-            ->getQuery()
-            ->getResult();
+        $blogs = $em->getRepository('SibersBlogBundle:Blog')
+            ->getLatestBlogs();
 
 
         return $this->render("main/index.html.twig", [
