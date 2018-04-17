@@ -13,6 +13,13 @@ SibersBlogBundle_mainpage:
 
 SibersBlogBundle_about:
     path:   /about
-    defaults: { _controller: "SibersBlogBundle:mainPage:about" }
+    defaults: { _controller: "SibersBlogBundle:About:about" }
     requirements:
          methods:  GET
+
+
+SibersBlogBundle_contact:
+    path:  /contact
+    defaults: { _controller: "SibersBlogBundle:Contact:contact" }
+    requirements:
+        methods:  GET

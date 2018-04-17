@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: user
+ * User: valeria
  * Date: 4/17/18
- * Time: 5:01 PM
+ * Time: 8:39 PM
  */
 
 namespace Sibers\BlogBundle\Controller;
@@ -13,18 +13,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 
-class mainPageController extends Controller
+class AboutController extends Controller
 {
-
-
-    public function indexAction()
+    public function aboutAction()
     {
-        return $this->render("main/index.html.twig");
+        return $this->render("main/about.html.twig");
     }
-
-
-
-
-
-
 }
