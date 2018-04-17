@@ -3,11 +3,13 @@
 
 namespace Sibers\BlogBundle\DataFixtures\ORM;
 
+
+use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Sibers\BlogBundle\Entity\Blog;
 
-class BlogFixtures implements FixtureInterface
+class BlogFixtures  extends Fixture implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {
