@@ -23,3 +23,12 @@ SibersBlogBundle_contact:
     defaults: { _controller: "SibersBlogBundle:Contact:contact" }
     requirements:
         methods:  GET|POST
+
+
+
+SibersBlogBundle_blog_show:
+    path:  /{id}
+    defaults: { _controller: "SibersBlogBundle:Blog:show" }
+    requirements:
+        methods:  GET
+        id: \d+
