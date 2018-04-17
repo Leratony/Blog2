@@ -19,7 +19,16 @@ class mainPageController extends Controller
 
     public function indexAction()
     {
-        return $this->render("main/index.html.twig");
+        $em = $this->getDoctrine()
+            ->getManager();
+
+        $blogs = $em->getRepository('SibersBlogBundle:Blog')
+            ->getLatestBlogs();
+
+
+        return $this->render("main/index.html.twig", [
+            'blogs' => $blogs
+        ]);
     }
 
 
