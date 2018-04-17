@@ -29,7 +29,7 @@ class ContactController extends Controller
         if ($request->isMethod($request::METHOD_POST)) {
             $form->handleRequest($request);
 
-            if ($form->isValid()) {
+            if ($form->isSubmitted() && $form->isValid()) {
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact enquiry from symblog')
                     ->setFrom('enquiries@symblog.co.uk')
@@ -40,7 +40,7 @@ class ContactController extends Controller
                 $this->get('mailer')->send($message);
 
                 $this->get('session')->getFlashBag()->add('sibers-notice', 'Your contact enquiry was successfully sent. Thank you!');
-                return $this->redirect($this->generateUrl('SibersBlogBundle_contact'));
+                return $this->redirectToRoute('SibersBlogBundle_contact');
             }
         }
 

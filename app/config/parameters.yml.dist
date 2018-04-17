@@ -16,7 +16,7 @@ parameters:
     mailer_host: smtp.gmail.com
     mailer_user: eva.13ant
     mailer_password: IknowYR19
-    spool: { type: memory }
+
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
