@@ -1,5 +1,10 @@
 sibers_blog:
     resource: "@SibersBlogBundle/Controller/"
     type:     annotation
-    prefix:   /
 
+
+SibersBlogBundle_mainpage:
+    path:     /
+    defaults: { _controller: "SibersBlogBundle:mainPage:index" }
+    requirements:
+         methods:  GET

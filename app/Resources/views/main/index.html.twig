@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
-    <title>symblog</title>
-    <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-    <link href='/blog.css' rel='stylesheet' type='text/css'>
-    <link href='/sidebar.css' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="favicon.ico" />
-</head>
-<body>
+{% extends 'SibersBlogBundle::layout.html.twig' %}
 
-<section id="wrapper">
-    <header id="header">
-        <div class="top">
-            <nav>
-                <ul class="navigation">
-                    <li><a href="/homepage">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
-
-            <h2><a href="/homepage">symblog</a></h2>
-            <h3><a href="/blog">creating a blog in Symfony3</a></h3>
-
-    </header>
-
-    <section class="main-col">
-        <!-- main body block here -->
-    </section>
-    <aside class="sidebar">
-        <!-- main sidebar block here -->
-    </aside>
-
-    <div id="footer">
-        Symfony2 blog tutorial - created by Sibers
-    </div>
-</section>
-
-<!-- Js files here -->
-</body>
-</html>
+{% block body %}
+    Blog homepage
+{% endblock %}
