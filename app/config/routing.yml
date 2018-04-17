@@ -1,0 +1,5 @@
+sibers_blog:
+    resource: "@SibersBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
