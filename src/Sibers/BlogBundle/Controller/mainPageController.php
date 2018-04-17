@@ -19,7 +19,20 @@ class mainPageController extends Controller
 
     public function indexAction()
     {
-        return $this->render("main/index.html.twig");
+        $em = $this->getDoctrine()
+            ->getManager();
+
+        $blogs = $em->createQueryBuilder()
+            ->select('b')
+            ->from('Sibers\BlogBundle\Entity\Blog',  'b')
+            ->addOrderBy('b.created', 'DESC')
+            ->getQuery()
+            ->getResult();
+
+
+        return $this->render("main/index.html.twig", [
+            'blogs' => $blogs
+        ]);
     }
 
 
