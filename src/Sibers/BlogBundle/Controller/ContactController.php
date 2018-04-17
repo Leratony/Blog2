@@ -30,11 +30,17 @@ class ContactController extends Controller
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                // Perform some action, such as sending an email
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Contact enquiry from symblog')
+                    ->setFrom('enquiries@symblog.co.uk')
+                    ->setTo('eva.13ant@gmail.com')
+                    ->setBody($this->renderView('main/contactEmail.txt.twig', array('enquiry' => $enquiry)));
 
-                // Redirect - This is important to prevent users re-posting
-                // the form if they refresh the page
-                return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
+
+                $this->get('mailer')->send($message);
+
+                $this->get('session')->getFlashBag()->add('blogger-notice', 'Your contact enquiry was successfully sent. Thank you!');
+                return $this->redirect($this->generateUrl('SibersBlogBundle_contact'));
             }
         }
 
