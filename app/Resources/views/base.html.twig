@@ -37,8 +37,8 @@
         </div>
 
 
-        <h2>{% block blog_title %}<a href="/homepage">symblog</a>{% endblock %}</h2>
-        <h3>{% block blog_tagline %}<a href="/blog">creating a blog in Symfony3</a>{% endblock %}</h3>
+        <h2>{% block blog_title %}<a href="{{ path('SibersBlogBundle_mainpage') }}">symblog</a>{% endblock %}</h2>
+        <h3>{% block blog_tagline %}<a href="{{ path('SibersBlogBundle_mainpage') }}">creating a blog in Symfony3</a>{% endblock %}</h3>
 
     </header>
 
