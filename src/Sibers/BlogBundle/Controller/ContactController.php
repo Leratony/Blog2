@@ -30,6 +30,7 @@ class ContactController extends Controller
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
+                $data = $form->getData();
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact enquiry from symblog')
                     ->setFrom('enquiries@symblog.co.uk')
