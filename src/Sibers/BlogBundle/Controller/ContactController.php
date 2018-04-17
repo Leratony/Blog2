@@ -33,13 +33,13 @@ class ContactController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact enquiry from symblog')
                     ->setFrom('enquiries@symblog.co.uk')
-                    ->setTo('eva.13ant@gmail.com')
+                    ->setTo($this->container->getParameter('sibers_blog.emails.contact_email'))
                     ->setBody($this->renderView('main/contactEmail.txt.twig', array('enquiry' => $enquiry)));
 
 
                 $this->get('mailer')->send($message);
 
-                $this->get('session')->getFlashBag()->add('blogger-notice', 'Your contact enquiry was successfully sent. Thank you!');
+                $this->get('session')->getFlashBag()->add('sibers-notice', 'Your contact enquiry was successfully sent. Thank you!');
                 return $this->redirect($this->generateUrl('SibersBlogBundle_contact'));
             }
         }
