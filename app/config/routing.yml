@@ -8,3 +8,11 @@ SibersBlogBundle_mainpage:
     defaults: { _controller: "SibersBlogBundle:mainPage:index" }
     requirements:
          methods:  GET
+
+
+
+SibersBlogBundle_about:
+    path:   /about
+    defaults: { _controller: "SibersBlogBundle:mainPage:about" }
+    requirements:
+         methods:  GET

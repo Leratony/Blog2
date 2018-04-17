@@ -21,4 +21,10 @@ class mainPageController extends Controller
     {
         return $this->render("main/index.html.twig");
     }
+
+
+    public function aboutAction()
+    {
+        return $this->render("main/about.html.twig");
+    }
 }
