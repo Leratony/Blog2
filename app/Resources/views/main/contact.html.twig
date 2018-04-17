@@ -16,11 +16,11 @@
 
 
     {% for flashMessage in app.session.flashbag.get('blogger-notice') %}
-        <div class="blogger-notice">
+        <div class="sibers-notice">
             {{ flashMessage }}
         </div>
     {% endfor %}
-    
+
 
     <p>Want to contact symblog?</p>
 
@@ -31,6 +31,7 @@
     {{ form_row(form.email) }}
     {{ form_row(form.subject) }}
     {{ form_row(form.body) }}
+    
 
     {{ form_rest(form) }}
 
