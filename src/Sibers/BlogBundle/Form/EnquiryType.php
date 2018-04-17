@@ -27,6 +27,6 @@ class EnquiryType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'sibers_blog_bundle_enquiry_type';
+        return 'contact';
     }
 }
