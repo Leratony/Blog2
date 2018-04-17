@@ -22,4 +22,4 @@ SibersBlogBundle_contact:
     path:  /contact
     defaults: { _controller: "SibersBlogBundle:Contact:contact" }
     requirements:
-        methods:  GET
+        methods:  GET|POST
