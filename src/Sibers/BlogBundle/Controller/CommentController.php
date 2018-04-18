@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
  * Comment controller.
  */
 
-class CommentsControler extends Controller
+class CommentController extends Controller
 {
     public function newAction($blog_id)
     {
