@@ -32,7 +32,21 @@ class mainPageController extends Controller
         ]);
     }
 
+    public function sidebarAction()
+    {
+        $em = $this->getDoctrine()
+            ->getManager();
 
+        $tags = $em->getRepository('SibersBlogBundle:Blog')
+            ->getTags();
+
+        $tagWeights = $em->getRepository('SibersBlogBundle:Blog')
+            ->getTagWeights($tags);
+
+        return $this->render('main/sidebar.html.twig', array(
+            'tags' => $tagWeights
+        ));
+    }
 
 
 
