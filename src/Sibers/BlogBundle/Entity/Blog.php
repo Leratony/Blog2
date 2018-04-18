@@ -5,6 +5,7 @@ namespace Sibers\BlogBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Sibers\BlogBundle\Entity\Repository\BlogRepository")
@@ -44,6 +45,10 @@ class Blog
      * @ORM\Column(type="text")
      */
     protected $tags;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="blog")
+     */
 
     protected $comments;
 
@@ -241,6 +246,7 @@ class Blog
 
     public function __construct()
     {
+        $this->comments = new ArrayCollection();
         $this->setCreated(new \DateTime());
         $this->setUpdated(new \DateTime());
     }
@@ -251,5 +257,42 @@ class Blog
     public function setUpdatedValue()
     {
         $this->setUpdated(new \DateTime());
+    }
+
+
+
+
+    /**
+     * Add comment
+     *
+     * @param \Sibers\BlogBundle\Entity\Comment $comment
+     *
+     * @return Blog
+     */
+    public function addComment(\Sibers\BlogBundle\Entity\Comment $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \Sibers\BlogBundle\Entity\Comment $comment
+     */
+    public function removeComment(\Sibers\BlogBundle\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
     }
 }

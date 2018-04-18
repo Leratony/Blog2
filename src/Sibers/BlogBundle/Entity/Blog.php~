@@ -5,9 +5,10 @@ namespace Sibers\BlogBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Blogger\BlogBundle\Entity\Repository\BlogRepository")
+ * @ORM\Entity(repositoryClass="Sibers\BlogBundle\Entity\Repository\BlogRepository")
  * @ORM\Table(name="blog")
  * @ORM\HasLifecycleCallbacks
  */
@@ -44,6 +45,10 @@ class Blog
      * @ORM\Column(type="text")
      */
     protected $tags;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="blog")
+     */
 
     protected $comments;
 
@@ -241,6 +246,7 @@ class Blog
 
     public function __construct()
     {
+        $this->comments = new ArrayCollection();
         $this->setCreated(new \DateTime());
         $this->setUpdated(new \DateTime());
     }
@@ -252,4 +258,9 @@ class Blog
     {
         $this->setUpdated(new \DateTime());
     }
+
+
+
+    
+
 }
