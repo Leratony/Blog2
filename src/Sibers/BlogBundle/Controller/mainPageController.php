@@ -32,7 +32,27 @@ class mainPageController extends Controller
         ]);
     }
 
+    public function sidebarAction()
+    {
+        $em = $this->getDoctrine()
+            ->getManager();
 
+        $tags = $em->getRepository('SibersBlogBundle:Blog')
+            ->getTags();
+
+        $tagWeights = $em->getRepository('SibersBlogBundle:Blog')
+            ->getTagWeights($tags);
+
+        $commentLimit   = $this->container
+            ->getParameter('sibers_blog.comments.latest_comment_limit');
+
+        $latestComments = $em->getRepository('SibersBlogBundle:Comment')->getLatestComments($commentLimit);
+
+        return $this->render('main/sidebar.html.twig', array(
+            'latestComments' => $latestComments,
+            'tags' => $tagWeights
+        ));
+    }
 
 
 

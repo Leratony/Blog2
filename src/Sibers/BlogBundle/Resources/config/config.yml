@@ -1,3 +1,6 @@
 parameters:
     # Blogger contact email address
     sibers_blog.emails.contact_email: eva.13ant@gmail.com
+
+    # Blogger max latest comments
+    sibers_blog.comments.latest_comment_limit: 10
