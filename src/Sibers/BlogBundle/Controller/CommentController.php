@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sibers\BlogBundle\Entity\Comment;
 use Sibers\BlogBundle\Form\CommentType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 
 /**
@@ -50,6 +51,7 @@ class CommentController extends Controller
                     'id' => $comment->getBlog()->getId())) .
                 '#comment-' . $comment->getId()
             );
+
         }
 
         return $this->render('comment/create.html.twig', array(
