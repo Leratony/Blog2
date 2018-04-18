@@ -32,3 +32,11 @@ SibersBlogBundle_blog_show:
     requirements:
         methods:  GET
         id: \d+
+
+
+SibersBlogBundle_comment_create:
+    path:  /comments{blog_id}
+    defaults: { _controller: "SibersBlogBundle:Comment:create" }
+    requirements:
+        methods:  POST
+        id: \d+
