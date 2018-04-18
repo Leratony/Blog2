@@ -63,6 +63,16 @@ class Blog
     protected $updated;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $slug;
+
+
+
+
+    
+
+    /**
      * Get id
      *
      * @return integer
@@ -299,5 +309,29 @@ class Blog
     public function __toString()
     {
         return $this->getTitle();
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Blog
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
