@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95a962d2-7981-4090-8bad-3d6d58d6c035" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Sibers/BlogBundle/Form/CommentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/blog/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/blog/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/comment/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/comment/form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentsControler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sibers/BlogBundle/Entity/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sibers/BlogBundle/Entity/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/beach.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/images/beach.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="290">
+              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
                 <element signature="e#49#106#0#PHP" expanded="true" />
                 <element signature="e#564#588#0#PHP" expanded="true" />
@@ -37,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sibers/BlogBundle/Form/CommentType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
@@ -133,6 +128,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/blog/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Sibers/BlogBundle/Entity/Blog.php" />
         <option value="$PROJECT_DIR$/src/Sibers/BlogBundle/Form/CommentType.php" />
+        <option value="$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php" />
       </list>
     </option>
   </component>
@@ -383,7 +379,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26060000" />
+    <option name="totallyTimeSpent" value="26301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="307" width="1911" height="773" extended-state="0" />
@@ -715,19 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#49#106#0#PHP" expanded="true" />
-            <element signature="e#564#588#0#PHP" expanded="true" />
-            <element signature="e#1344#1370#0#PHP" expanded="true" />
-            <element signature="e#1624#1647#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sibers/BlogBundle/Entity/Blog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -741,6 +724,19 @@
           <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding>
             <element signature="e#42#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sibers/BlogBundle/Controller/CommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding>
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#564#588#0#PHP" expanded="true" />
+            <element signature="e#1344#1370#0#PHP" expanded="true" />
+            <element signature="e#1624#1647#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
