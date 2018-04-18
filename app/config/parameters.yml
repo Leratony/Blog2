@@ -8,7 +8,7 @@ parameters:
     mailer_transport: gmail
     mailer_encryption: ssl
     mailer_host: smtp.gmail.com
-    mailer_user: eva.13ant@gmail.com
+    mailer_user: eva.13ant
     mailer_password: IknowYR19
     secret: d505d33ed59f741f5a1e6a6ab97fe667b364f26b
     mailer_auth_mode: login
