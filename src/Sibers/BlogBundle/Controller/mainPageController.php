@@ -43,7 +43,13 @@ class mainPageController extends Controller
         $tagWeights = $em->getRepository('SibersBlogBundle:Blog')
             ->getTagWeights($tags);
 
+        $commentLimit   = $this->container
+            ->getParameter('sibers_blog.comments.latest_comment_limit');
+
+        $latestComments = $em->getRepository('SibersBlogBundle:Comment')->getLatestComments($commentLimit);
+
         return $this->render('main/sidebar.html.twig', array(
+            'latestComments' => $latestComments,
             'tags' => $tagWeights
         ));
     }
