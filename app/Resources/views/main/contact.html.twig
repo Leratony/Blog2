@@ -15,8 +15,8 @@
     </header>
 
 
-    {% for flashMessage in app.session.flashbag.get('blogger-notice') %}
-        <div class="sibers-notice">
+    {% for flashMessage in app.session.flashbag.get('sibers-notice') %}
+        <div class="blogger-notice">
             {{ flashMessage }}
         </div>
     {% endfor %}
